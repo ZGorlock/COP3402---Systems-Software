@@ -1,0 +1,11 @@
+var x;
+procedure A(x,y,z,t,u);
+begin
+	return:= 11;
+end;
+
+begin
+	call A(1,2,3,4,5);
+	
+	x:= call A(6,7,8,9,10);
+end.

@@ -1,0 +1,5 @@
+Name	Type	Level	Value
+i	var	0	4
+a	var	0	5
+aprev	var	0	6
+t	var	0	7

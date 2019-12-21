@@ -1,0 +1,28 @@
+var x,y;
+/*This program computes the absolute value of an integer using two subroutines */
+
+procedure Neg;
+	begin
+		y:= 0-x;
+	end;
+
+procedure ABS;
+	var a;
+	begin
+		a:=x;
+	
+		if a<0 then
+			call Neg
+		else
+			y:= a;
+		
+	end;
+	
+begin
+	
+	read x;
+	
+	call ABS;
+	
+	write y;
+end.

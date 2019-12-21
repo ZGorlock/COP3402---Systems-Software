@@ -1,0 +1,57 @@
+var p,q;
+
+procedure Simplify(p, q);
+	var gcd;
+	procedure Print();
+	begin
+		write p;
+		write q;
+	end;
+
+	procedure GCD(m,n);
+		var r;
+	
+		procedure Remainder(a, b);
+		begin 
+
+			while a>=0 do
+				a:= a-b;
+
+			return:= a+b;		
+			
+		end;
+
+	begin
+
+		if m<n then
+		begin	
+			r:= m;
+			m:= n;
+			n:=r;
+		end;
+
+		r:= call Remainder(m,n);
+		while r <> 0 do
+		begin
+			m:= n;
+			n:= r;
+			r:= call Remainder(m,n);
+		end;
+	
+		return:= n;
+	
+	end;
+	
+begin
+	gcd:= call GCD(p,q);
+	p:= p/gcd;
+	q:= q/gcd;
+	call Print();
+end;
+
+
+begin
+	read p;
+	read q;
+	call Simplify(p,q);
+end.

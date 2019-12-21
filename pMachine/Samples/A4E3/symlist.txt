@@ -1,0 +1,5 @@
+Name	Type	Level	Value
+f		var		0		4
+n		var		0		5
+fact	proc	0		1
+ans1	var		1		4

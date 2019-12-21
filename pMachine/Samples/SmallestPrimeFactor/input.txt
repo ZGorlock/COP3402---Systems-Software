@@ -1,0 +1,41 @@
+/* This program tests whether the input is a composite number or rather prime.
+	If it is composite, the result is the smallest prime number by which it is divisible.
+	If it is prime, the result is the number itself.
+	
+	Examples:
+	- input: 75  output: 3
+	- input: 13  output: 13
+*/
+
+var x,y;
+
+procedure Composite(n);
+var i,j;
+begin
+	return:=n;
+	i:=2;
+	while i < n/2 +1 do
+	begin
+	
+		j:=n;
+	
+		while j>= i do
+			j:= j-i;
+	
+		/* j = n mod i now */
+	
+		if j = 0 then begin
+			return:= i;
+			i:= n/2;
+		end;
+			
+		i:=i+1;
+	end;
+end;
+
+begin
+	read x;
+	y:=call Composite(x);
+	write y;
+end.
+	
